@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: var(--primary-bg);
+  color: #fff;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-bg: #09090B;
+  --secondary-bg: #141319;
+  --tertiary-bg: #17171C;
+}
+
+.sp-text {
+  background-image: conic-gradient(at top, #c084fc, #a855f7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.icon {
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  background-color: var(--secondary-bg);
+  cursor: pointer;
+}
+
+.fade-text {
+  animation: fadeInOut 2.5s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+}
+
+/* --- Purple Success Toast --- */
+.purple-success {
+  background: rgba(139, 92, 246, 0.15) !important;
+  /* soft purple tint */
+  color: #a78bfa !important;
+  border-left: 4px solid #a78bfa !important;
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+}
+
+/* --- Purple Info Toast --- */
+.purple-info {
+  background: rgba(167, 139, 250, 0.12) !important;
+  color: #c084fc !important;
+  border-left: 4px solid #c084fc !important;
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+}
+
+/* purple progress bar ONLY for these custom ones */
+.purple-progress .Toastify__progress-bar {
+  background: linear-gradient(to right, #a78bfa, #c084fc) !important;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeSlide {
+  animation: fadeSlide .15s ease-out;
+}
